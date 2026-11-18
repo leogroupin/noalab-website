@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NoaLab — colour, material and finish for Indian surface makers</title>
+<meta name="description" content="NoaLab maps the category before designing the collection. A colour, material and finish studio for Indian surface makers. NoaLab Maps No.01, Indian laminates, is published in January 2027.">
+<meta property="og:title" content="NoaLab">
+<meta property="og:description" content="We map the category before we design the collection. NoaLab Maps No.01: Indian laminates, January 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noalab.in/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316191d'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%23f2f3ef' stroke-width='2'/%3E%3Ccircle cx='21' cy='11' r='3.2' fill='%23b4874f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one screen, two columns — the statement on the left, the coordinate map on the right; stacks on phones. */
+:root{
+  --paper:#f2f3ef; --ink:#16191d; --muted:#5d6268; --rule:#d4d7d0; --accent:#2f5d50; --panel:#e8eae4;
+  --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{--paper:#121417;--ink:#eceee9;--muted:#9aa0a6;--rule:#2a2e33;--accent:#8fc2b0;--panel:#1a1d21;color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.mark svg{width:22px;height:22px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+main{flex:1}
+main .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center;padding-block:64px}
+h1{font-family:var(--display);font-weight:760;font-stretch:88%;font-size:clamp(40px,5.4vw,68px);line-height:1.02;letter-spacing:-.02em;margin:0 0 24px;text-wrap:balance}
+.lede{font-size:19px;max-width:34em;margin:0 0 28px}
+.study{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding-block:20px;margin:0 0 28px;display:grid;grid-template-columns:auto 1fr;gap:6px 20px}
+.study dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.study dd{margin:0;font-variant-numeric:tabular-nums}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;padding:14px 20px;border-radius:2px;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.addr{font-family:var(--mono);font-size:14px;color:var(--muted);user-select:all}
+figure{margin:0}
+.map{position:relative;background:var(--panel);border:1px solid var(--rule);aspect-ratio:1/1;max-width:100%}
+canvas{width:100%;height:100%;display:block}
+figcaption{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+footer a{color:inherit}
+@media (max-width:860px){main .wrap{grid-template-columns:1fr;gap:40px;padding-block:40px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="mark" aria-label="NoaLab">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="2.4"/><circle cx="22" cy="10" r="3.6" fill="#b4874f"/></svg>
+      NoaLab
+    </div>
+    <div class="tag">Colour · Material · Finish</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section>
+      <h1>We map the category before we design the collection.</h1>
+      <p class="lede">NoaLab is a colour, material and finish studio for Indian surface makers: laminates, bath finishes, tiles and coatings. We show you where your market crowds and where the space is, then design the decors, colours and finishes that fill it, without adding cost.</p>
+
+      <dl class="study">
+        <dt>Study</dt><dd>NoaLab Maps No.01 — Indian laminates</dd>
+        <dt>Scope</dt><dd>8 brands · 480 decors, coded by hand from physical samples</dd>
+        <dt>Published</dt><dd>January 2027</dd>
+      </dl>
+
+      <div class="cta">
+        <a class="btn" id="get-study" href="mailto:hello@noalab.in?subject=NoaLab%20Maps%20No.01&body=Please%20send%20me%20the%20study%20when%20it%20is%20published.%0A%0AName%3A%0ACompany%3A%0ARole%3A">Get the study when it's out <span aria-hidden="true">→</span></a>
+        <button class="btn ghost" id="copy-addr" type="button">Copy email address</button>
+      </div>
+      <p class="addr" style="margin:14px 0 0">hello@noalab.in</p>
+    </section>
+
+    <figure>
+      <div class="map"><canvas id="map" aria-label="Illustration of a category map: decors plotted from natural to artificial and from warm to cool" role="img"></canvas></div>
+      <figcaption>Illustration only. How a category map reads: each dot a decor, placed by how natural or artificial it looks and how warm or cool its colour is. The real map of Indian laminates is published in January 2027.</figcaption>
+    </figure>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>NoaLab · India</span>
+    <span><a href="mailto:hello@noalab.in">hello@noalab.in</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Copy address
+  var b=document.getElementById('copy-addr');
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email address'},1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('hello@noalab.in').then(done,function(){})}
+  });
+
+  // Illustrative coordinate map (seeded, so it draws the same every time; not real data)
+  var c=document.getElementById('map'),ctx=c.getContext('2d');
+  var seed=20270113;function rnd(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296}
+  function gauss(){return (rnd()+rnd()+rnd()+rnd()-2)/2}
+  var tones={wood:['#8a5a36','#a8784c','#c39a6b','#6b4429','#d2b48c','#5a3a24'],stone:['#d9d6cf','#bdb9b0','#9a968e','#e7e4dc','#7e7a73'],solid:['#2f3e46','#c0533a','#e0c36a','#4f6d7a','#9c4a5a','#e8e4da','#3d5a40'],other:['#6d6f73','#a7a39b','#3f4246']};
+  var dots=[];
+  function cluster(n,cx,cy,sx,sy,set){for(var i=0;i<n;i++){dots.push({x:cx+gauss()*sx,y:cy+gauss()*sy,col:set[Math.floor(rnd()*set.length)]})}}
+  cluster(150,0.24,0.70,0.10,0.10,tones.wood);   // natural, warm: the woodgrain crowd
+  cluster(70,0.28,0.30,0.12,0.10,tones.stone);   // natural, cool: stones
+  cluster(80,0.80,0.55,0.10,0.28,tones.solid);   // artificial: solids
+  cluster(30,0.62,0.40,0.12,0.18,tones.other);   // abstracts, industrial
+  function draw(){
+    var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);
+    var W=r.width,H=r.height,p=Math.max(28,W*0.07);
+    var css=getComputedStyle(document.documentElement);var rule=css.getPropertyValue('--rule').trim(),muted=css.getPropertyValue('--muted').trim(),ink=css.getPropertyValue('--ink').trim();
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle=rule;ctx.lineWidth=1;
+    for(var i=0;i<=8;i++){var x=p+(W-2*p)*i/8,y=p+(H-2*p)*i/8;ctx.beginPath();ctx.moveTo(x,p);ctx.lineTo(x,H-p);ctx.stroke();ctx.beginPath();ctx.moveTo(p,y);ctx.lineTo(W-p,y);ctx.stroke()}
+    ctx.strokeStyle=ink;ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(W/2,p-6);ctx.lineTo(W/2,H-p+6);ctx.moveTo(p-6,H/2);ctx.lineTo(W-p+6,H/2);ctx.stroke();
+    var rad=Math.max(3,W/110);
+    dots.forEach(function(o){var x=p+(W-2*p)*Math.min(.97,Math.max(.03,o.x)),y=p+(H-2*p)*Math.min(.97,Math.max(.03,o.y));ctx.beginPath();ctx.arc(x,y,rad,0,7);ctx.fillStyle=o.col;ctx.globalAlpha=.92;ctx.fill();ctx.globalAlpha=1});
+    // empty zone marker
+    var ex=p+(W-2*p)*0.42,ey=p+(H-2*p)*0.86,er=(W-2*p)*0.09;ctx.setLineDash([4,4]);ctx.strokeStyle=ink;ctx.beginPath();ctx.arc(ex,ey,er,0,7);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=muted;ctx.font='500 '+Math.max(10,W/52)+'px "IBM Plex Mono", monospace';
+    ctx.textAlign='left';ctx.fillText('NATURAL',p,p-10);ctx.textAlign='right';ctx.fillText('ARTIFICIAL',W-p,p-10);
+    ctx.save();ctx.translate(p-10,H/2);ctx.rotate(-Math.PI/2);ctx.textAlign='center';ctx.fillText('WARM  ←→  COOL',0,0);ctx.restore();
+    ctx.fillStyle=ink;ctx.textAlign='center';ctx.fillText('empty zone',ex,ey+er+16);
+  }
+  draw();window.addEventListener('resize',draw);
+  if(window.matchMedia){var m=window.matchMedia('(prefers-color-scheme: dark)');if(m.addEventListener)m.addEventListener('change',draw)}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+})();
+</script>
+</body>
+</html>
